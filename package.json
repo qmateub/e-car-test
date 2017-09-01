@@ -1,10 +1,17 @@
 {
   "name": "e-car-test",
-  "description": "Graphql Heroku",
+  "version": "0.0.1",
+  "description": "Test e-car",
   "engines": {
-    "node": "8.2.1"
+    "node": "6.11.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
   },
   "dependencies": {
+    "ejs": "2.5.6",
+    "express": "4.15.2",
     "apollo-server-express": "^1.1.2",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
@@ -13,7 +20,6 @@
     "babel-preset-stage-0": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.17.1",
-    "express": "^4.15.2",
     "firebase-admin": "~4.1.2",
     "firebase-functions": "^0.5",
     "graphql": "^0.9.3",
@@ -22,5 +28,14 @@
     "mongoose": "^4.11.9",
     "babel-plugin-async-to-promises": "^1.0.5"
   },
-  "private": true
+  "repository": {
+    "type": "git",
+    "url": "https://git.heroku.com/warm-beach-94434.git"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
 }
