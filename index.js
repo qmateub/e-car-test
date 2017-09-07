@@ -13,7 +13,7 @@ const schema = makeExecutableSchema({
 
 // mongoose.connect('mongodb://guest:guest123@ds161833.mlab.com:61833/e_car');
 mongoose.connect(
-  `mongodb://${process['MONGODB_USER']}:${process['MONGODB_PASS']}@${process[
+  `mongodb://${process.env.['MONGODB_USER']}:${process.env['MONGODB_PASS']}@${process.env[
     'MONGODB_URL'
   ]}`
 );
