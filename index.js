@@ -6,14 +6,17 @@ import mongoose from 'mongoose';
 import typeDefs from './graphql/data/schema';
 import resolvers from './graphql/data/resolvers';
 
-
-
 const schema = makeExecutableSchema({
   typeDefs,
   resolvers,
 });
-// TODO username and password
-mongoose.connect('mongodb://guest:guest123@ds161833.mlab.com:61833/e_car');
+
+// mongoose.connect('mongodb://guest:guest123@ds161833.mlab.com:61833/e_car');
+mongoose.connect(
+  `${process['MONGODB_USER']}:${process['MONGODB_PASS']}@${process[
+    'MONGODB_URL'
+  ]}`
+);
 
 const User = mongoose.model('User', {
   firstName: String,
@@ -45,4 +48,4 @@ app.use(
 
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
-app.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 5000);
