@@ -13,9 +13,8 @@ const schema = makeExecutableSchema({
 });
 
 mongoose.connect(
-  `mongodb://${process.env['MONGODB_USER']}:${process.env['MONGODB_PASS']}@${process.env[
-    'MONGODB_URL'
-  ]}`
+  `mongodb://${process.env.MONGODB_USER}:${process.env.MONGODB_PASS}@${process
+    .env.MONGODB_URL}`
 );
 
 const app = express();
