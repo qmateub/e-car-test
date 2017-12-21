@@ -17,3 +17,10 @@ export const Block = mongoose.model('Block', {
   createdAt: { type: Date, default: Date.now },
   modifiedAt: { type: Date, default: Date.now },
 });
+
+export const Question = mongoose.model('Question', {
+  key: String,
+  text: String!,
+  createdAt: { type: Date, default: Date.now },
+  modifiedAt: { type: Date, default: Date.now },
+});

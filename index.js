@@ -5,7 +5,7 @@ import { makeExecutableSchema } from 'graphql-tools';
 import mongoose from 'mongoose';
 import typeDefs from './src/graphql/schema';
 import resolvers from './src/graphql/resolvers';
-import { User, Block } from './src/db/entities';
+import { User, Block, Question } from './src/db/entities';
 
 const schema = makeExecutableSchema({
   typeDefs,
@@ -22,7 +22,7 @@ const app = express();
 app.use(
   '/graphql',
   bodyParser.json(),
-  graphqlExpress({ schema, context: { User, Block } })
+  graphqlExpress({ schema, context: { User, Block, Question } })
 );
 
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));

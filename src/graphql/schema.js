@@ -20,6 +20,14 @@ type Block {
   modifiedAt: String!
 }
 
+type Question {
+  _id: String!
+  key: String!
+  text: String!
+  createdAt: String!
+  modifiedAt: String!
+}
+
 input UserSearch {
   id: String
   firstName: String
