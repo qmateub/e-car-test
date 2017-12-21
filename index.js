@@ -13,8 +13,9 @@ const schema = makeExecutableSchema({
 });
 
 mongoose.connect(
-  `mongodb://${process.env.MONGODB_USER}:${process.env.MONGODB_PASS}@${process
-    .env.MONGODB_URL}`
+  `mongodb://${process.env.MONGODB_USER}:${process.env.MONGODB_PASS}@${
+    process.env.MONGODB_URL
+  }`
 );
 
 const app = express();
@@ -25,6 +26,6 @@ app.use(
   graphqlExpress({ schema, context: { User, Block, Question } })
 );
 
+// Deploying
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
-
 app.listen(process.env.PORT || 5000);
