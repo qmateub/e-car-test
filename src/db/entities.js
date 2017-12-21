@@ -20,7 +20,7 @@ export const Block = mongoose.model('Block', {
 
 export const Question = mongoose.model('Question', {
   key: String,
-  text: String!,
+  text: String,
   createdAt: { type: Date, default: Date.now },
   modifiedAt: { type: Date, default: Date.now },
 });
