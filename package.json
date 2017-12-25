@@ -10,12 +10,13 @@
     "start": "babel-node index.js"
   },
   "dependencies": {
+    "apollo-server-express": "^1.1.2",
+    "body-parser": "^1.17.1",
+    "cors": "^2.8.4",
     "ejs": "2.5.7",
     "express": "4.16.2",
-    "mongoose": "^4.11.9",
     "graphql-tools": "^2.14.1",
-    "body-parser": "^1.17.1",
-    "apollo-server-express": "^1.1.2"
+    "mongoose": "^4.11.9"
   },
   "devDependencies": {
     "babel": "^6.23.0",
@@ -33,6 +34,10 @@
     "type": "git",
     "url": "https://git.heroku.com/warm-beach-94434.git"
   },
-  "keywords": ["node", "heroku", "express"],
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "license": "MIT"
 }
